@@ -11,7 +11,6 @@ export default class DemoFromModifierComponent extends Component {
 
   get data() {
     return {
-      foo: this.foo,
       value: this.myTask.last?.value,
       isIdle: this.myTask.isIdle,
       isPending: this.myTask.isPending,
@@ -21,8 +20,6 @@ export default class DemoFromModifierComponent extends Component {
 
   @task
   *myTask() {
-    this.foo = 2;
-
     console.log('modifier >> my task');
     yield new Promise((resolve) => setTimeout(resolve, 1000));
   }

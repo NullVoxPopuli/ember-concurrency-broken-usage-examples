@@ -9,4 +9,5 @@ export default class Router extends EmberRouter {
 Router.map(function () {
   this.route('constructor');
   this.route('from-modifier');
+  this.route('from-getter');
 });
